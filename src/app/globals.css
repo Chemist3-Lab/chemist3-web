@@ -71,3 +71,16 @@ body {
 .tabular {
   font-variant-numeric: tabular-nums;
 }
+
+/* Netlify Injected Badge & Drawer Suppression */
+#netlify-badge,
+[class*="netlify-badge"],
+[id*="netlify-drawer"],
+iframe[src*="netlify"],
+netlify-drawer,
+div[data-netlify-deploy-id] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
