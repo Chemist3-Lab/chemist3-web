@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+/* ==========================================================================
+   CHEMIST3 LABS — Design System
+   Principles: Authored, restrained, mathematical spacing, high contrast
+   ========================================================================== */
+
+@theme inline {
+  --color-background: #000000;
+  --color-foreground: #FFFFFF;
+  --color-surface: #0A0A0A;
+  --color-surface-subtle: #121212;
+  --color-border: #222222;
+  --color-border-subtle: #161616;
+  --color-border-strong: #333333;
+  --color-muted: #8E8E93;
+  --color-dim: #52525B;
+  --color-accent: #10B981;
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* Base Document Reset */
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+}
+
+::selection {
+  background-color: #27272A;
+  color: #FFFFFF;
+}
+
+/* Restrained Minimal Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #262626;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3F3F46;
+}
+
+/* Subtle Hairline Borders */
+.border-subtle {
+  border-color: #1F1F1F;
+}
+
+.border-strong {
+  border-color: #333333;
+}
+
+/* Tabular number utility for specifications & indexes */
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
