@@ -51,14 +51,16 @@ export default function HomePage() {
             </p>
           </div>
 
-          {/* Projects Breakdown (Project 1, Project 2, Project 3, Project 4) */}
+          {/* Projects Breakdown (All 6 Active Repositories) */}
           <div className="space-y-6">
-            {PROJECTS.map((project) => (
+            {PROJECTS.map((project, i) => (
               <div
                 key={project.id}
                 id={project.id}
-                className="border border-[#222222] bg-[#0A0A0A] p-6 sm:p-8 lg:p-10"
+                className="relative border border-[#222222] bg-[#0A0A0A] p-6 sm:p-8 lg:p-10 scroll-mt-24"
               >
+                {/* Legacy Anchor Alias */}
+                <span id={`project-${i + 1}`} className="absolute -top-24 left-0" />
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                   {/* Project Meta */}
                   <div className="lg:col-span-4 space-y-3">
